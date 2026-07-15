@@ -139,6 +139,9 @@ public class DishServiceImpl implements DishService {
         return dishVO;
     }
 
+
+
+
     /**
      * 根据id修改菜品基本信息和对应的口味信息
      *
@@ -198,6 +201,16 @@ public class DishServiceImpl implements DishService {
 
         }
 
+    }
+
+    public List<Dish> listBatchByCategoryId(Long categoryId) {
+
+        Dish dish = Dish.builder()
+                .categoryId(categoryId)
+                .status(StatusConstant.ENABLE)
+                .build();
+
+        return dishMapper.list(dish);
     }
 
 
