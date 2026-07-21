@@ -12,3 +12,8 @@ sky:
     port: 6379
     password: gyrs
     database: 10
+  wechat:
+    appid: wx68177f1788f52a44
+    secret: 602794c04908fd679916ca1a8e2fceb3
+
+
