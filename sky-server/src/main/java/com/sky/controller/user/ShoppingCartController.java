@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/user/shoppinpCart")
 @Slf4j
@@ -35,5 +37,10 @@ public class ShoppingCartController {
         shoppingCartService.addShoppingCart(shoppingCartDTO);
 
         return Result.success();
+    }
+
+
+    public Result<List<ShoppingCart>> list(){
+        return Result.success(shoppingCartService.showShoppingCart());
     }
 }
